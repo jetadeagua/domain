@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=}, initial-scale=1.0">
     <title>Jeta de Agua</title>
-    <link rel="stylesheet" href="/jetadeagua.github.io/css/estilo.css">
+    <link rel="stylesheet" href="/css/estilo.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,9 +28,9 @@
         <div class="navbar-links">
           <ul>
             <li><a href="#">Inicio</a></li>
-            <li><a href="#">Video</a></li>
+            <li><a href="#videos">Video</a></li>
             <li><a href="#">Foto</a></li>
-            <li><a href="#">Contacto </a></li>
+            <li><a href="#contacto">Contacto </a></li>
             
           </ul>
         </div>
@@ -45,32 +45,26 @@
 
   <!-- Full-width images with number text -->
   <div class="mySlides">
-    <div class="numbertext">1 / 6</div>
       <img src="/img/boda1.jpg" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">2 / 6</div>
       <img src="/img/Claqueta.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">3 / 6</div>
       <img src="/img/preview.jpg" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">4 / 6</div>
       <img src="/img/piscina.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">5 / 6</div>
       <img src="/img/tenis.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">6 / 6</div>
       <img src="/img/playa.png" style="width:100%">
   </div>
 
@@ -93,7 +87,7 @@
         <h1 class="column-title">Video</h1>
         <p class="column-text">Producimos videos de alta calidad para que su empresa y evento tengan el mejor recuerdo. Desde audio, iluminación y tomas áeras, todo al servicio del cliente</p>
         <li class="btn">
-          <a href="#">Ver más</a>
+          <a href="#videos">Ver más</a>
         </li>
     </div>
     <div class="column">
@@ -116,7 +110,30 @@
     
 </section>
 
+<!-- Videos -->
+<a name="videos" id="videos"></a> 
+<section class="videogallery">
+  <div class="container1">
+      <h1>Videos</h1>
+      <div class="video-container1">
+          <div class="video"><video src="video1.mp4" muted poster="video1.png"></video>
+              <img src="/img/boda1.jpg" alt="">
+          </div>
+           <div class="video"><video src="video2.mp4" muted poster="video2.png"></video></div>
+          <div class="video"><video src="video3.mp4"  muted poster="video3.png"></video></div>
+          <div class="video"><video src="video4.mp4"  muted poster="video4.png"></video></div>
+          <div class="video"><video src="video5.mp4"  muted poster="video5.png"></video></div>
+          <div class="video"><video src="video6.mp4"  muted poster="video6.png"></video></div>
+      </div>
+      <div class="popup-video">
+          <span>&times;</span>
+          <video src="/img/Video/Video 02.mp4" muted autoplay controls></video>
+          </div>
+  </div>
+  </section>
+
 <!-- SECCION Contacto -->
+<a name="contacto" id="contacto"></a> 
 <section class="contacto">
   <div class="contact-row">
 <div class="contact-column left">
@@ -167,13 +184,10 @@
   </div>
 
 </section>
-
-
-
-
     
 </section>
 
 <script src="java/js-jetadeagua.js"></script>
+
 </body>
 </html>
