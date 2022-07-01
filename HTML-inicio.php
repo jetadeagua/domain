@@ -1,7 +1,3 @@
-<?php
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,55 +18,67 @@
 <body>
     <header>
 <!-- MENU DE NAVEGACION -->
-        <nav class="topnav">
-            <div class="Logo">
-                <a href="#"><img src="img/Logo.png" alt="logo"></a>
-            </div>
-            <div class="menu">
-                <ul class="item">
-                    <li class="elemento"><a href="#">Inicio</a></li>
-                    <li class="elemento"><a href="#">Video</a></li>
-                    <li class="elemento"><a href="#">Fotografía</a></li>
-                    <li class="elemento"><a href="#">Contacto</a></li>
-                </ul>
-            </div>
-        </nav>
+      <nav class="navbar">
+        <div class="brand-title">
+          <a href="#"><img src="/img/Logo.png" alt="" class="logo"></a>
+        </div>
+        <a href="#" class="toggle-button">
+          <i class="fa-solid fa-bars"></i>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#videos">Video</a></li>
+            <li><a href="#">Foto</a></li>
+            <li><a href="#contacto">Contacto </a></li>
+            
+          </ul>
+        </div>
+      </nav>
+       
     </header>
     
  <!-- Slideshow container -->
- <div class="slideshow-container">
 
-    <!-- Full-width images with number and caption text -->
-    <div class="mySlides fade">
-      <div class="numbertext">1 / 3</div>
-      <video src="img/Video/Video3.mp4" autoplay muted loop></video>
-      <div class="text">Futbol Sin Censura</div>
-    </div>
-  
-    <div class="mySlides fade">
-      <div class="numbertext">2 / 3</div>
-      <video src="img/Video/Video2.mp4" autoplay muted loop></video>
-      <div class="text">Hogar de la Esperanza</div>
-    </div>
-  
-    <div class="mySlides fade">
-      <div class="numbertext">3 / 3</div>
-      <video src="img/Video/Video1.mp4" autoplay muted loop></video>
-      <div class="text">Altamira</div>
-    </div>
-    <div class="mySlides fade">
-        <div class="numbertext">4 / 3</div>
-        <video src="img/Video/Video4.mp4" autoplay muted loop></video>
-        <div class="text">La Estefana</div>
-      </div>
+<!-- Container for the image gallery -->
+<div class="container">
 
-  
-    <!-- Next and previous buttons
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+  <!-- Full-width images with number text -->
+  <div class="mySlides">
+      <img src="/img/boda1.jpg" style="width:100%">
   </div>
-  <br>
-  
+
+  <div class="mySlides">
+      <img src="/img/Claqueta.png" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+      <img src="/img/preview.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+      <img src="/img/piscina.png" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+      <img src="/img/tenis.png" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+      <img src="/img/playa.png" style="width:100%">
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  <!-- Image text -->
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+
+
   <!-- COLUMNAS -->
 <section class="Servicios">
   <div class="row">
@@ -79,13 +87,13 @@
         <h1 class="column-title">Video</h1>
         <p class="column-text">Producimos videos de alta calidad para que su empresa y evento tengan el mejor recuerdo. Desde audio, iluminación y tomas áeras, todo al servicio del cliente</p>
         <li class="btn">
-          <a href="#">Ver más</a>
+          <a href="#videos">Ver más</a>
         </li>
     </div>
     <div class="column">
       <i class="fa-solid fa-camera-retro"></i>
         <h1 class="column-title">Foto</h1>
-        <p class="column-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos maxime optio eaque incidunt assumenda tenetur aliquid reprehenderit praesentium aut omnis?</p>
+        <p class="column-text">Hacemos fotografías de la máxima calidad para todo tipo de eventos</p>
         <li class="btn">
           <a href="#">Ver más</a>
         </li>
@@ -93,7 +101,7 @@
     <div class="column">
       <i class="fa-solid fa-camera-retro"></i>
         <h1 class="column-title">Drone</h1>
-        <p class="column-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos maxime optio eaque incidunt assumenda tenetur aliquid reprehenderit praesentium aut omnis?</p>
+        <p class="column-text">Contamos con pilotos de drone con experiencia en turismo y Real Estate. Contamos con drones tipo FPV para las mejores imágenes de aventura.</p>
         <li class="btn">
           <a href="#">Ver más</a>
         </li>
@@ -102,36 +110,67 @@
     
 </section>
 
+<!-- Videos -->
+<a name="videos" id="videos"></a> 
+<section class="videogallery">
+  <div class="container1">
+      <h1>Videos</h1>
+      <div class="video-container1">
+          <div class="video"><video src="video1.mp4" muted poster="video1.png"></video>
+              <img src="/img/boda1.jpg" alt="">
+          </div>
+           <div class="video"><video src="video2.mp4" muted poster="video2.png"></video></div>
+          <div class="video"><video src="video3.mp4"  muted poster="video3.png"></video></div>
+          <div class="video"><video src="video4.mp4"  muted poster="video4.png"></video></div>
+          <div class="video"><video src="video5.mp4"  muted poster="video5.png"></video></div>
+          <div class="video"><video src="video6.mp4"  muted poster="video6.png"></video></div>
+      </div>
+      <div class="popup-video">
+          <span>&times;</span>
+          <video src="/img/Video/Video 02.mp4" muted autoplay controls></video>
+          </div>
+  </div>
+  </section>
+
 <!-- SECCION Contacto -->
+<a name="contacto" id="contacto"></a> 
 <section class="contacto">
   <div class="contact-row">
 <div class="contact-column left">
       <h3 class="form-sub">Hablemos</h3>
       <h2 class="form-titulo">Contactanos</h2>
       
-    <form action="action_page.php">           
-        <label for="fname">First Name</label>
-        <input type="text" id="fname" placeholder="Your Name">
+    <form method="post" action="enviar2.php">           
+        <label for="fname">Nombre Completo</label>
+        <input type="text" name="nombre" id="fname" placeholder="Tu nombre">
 
-        <label for="fname">Last Name</label>
-        <input type="text" id="lname" placeholder="Last Name">
+        <label for="email">Correo</label>
+        <input type="text" name="correo" id="email" required="required" placeholder="Tu correo electrónico">
+        
+        <label for="pnone">Teléfono</label>
+        <input type="text" name="telefono" id="phone" placeholder="Teléfono">
 
-        <label for="fname">City</label>
-        <select id="city" name="City" placeholder="City">
+        <label for="fname">Ciudad</label>
+        <select id="city" name="ciudad" placeholder="City">
           <option value="San José">San José</option>
           <option value="Alajuela">Alajuela</option>
-          <option value="Cartago">Cartago</option>
+          <option value="Cartago">Heredia</option>
+          <option value="Cartago">Cartago</option> 
+          <option value="Cartago">Puntarenas</option> 
+          <option value="Cartago">Guanacaste</option> 
+          <option value="Cartago">Limón</option> 
         </select>  
 
-        <label for="subject">Subject</label>
-        <textarea id="subject" name="Subject" placeholder="Write something.." style="height: 200px" ></textarea>
+
+        <label for="subject">Contanos tu proyecto</label>
+        <textarea id="subject" name="subject" placeholder="Escribe algo.." style="height: 200px" ></textarea>
       
         <input type="submit" value="Submit">
       </form>
 </div>
 
 <div class="contact-column middle">
-      <img src="img/playa1.jpg" alt="" class="img-contact">
+      <img src="img/playa1.jpg" alt="" class="1">
 </div>
 
 <div class="contact-column right">
@@ -149,17 +188,14 @@
         <p>Tirrases, Curridabat. <br> San José. Costa Rica </p></div>
         
   </div>
+  
   </div>
 
 </section>
-
-
-
-
     
 </section>
 
 <script src="java/js-jetadeagua.js"></script>
+
 </body>
 </html>
-
