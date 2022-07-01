@@ -10,6 +10,7 @@ html, body {
   overflow-x: hidden !important;
 }
 
+
 /* NAVEGACION */
 .navbar{
   display: flex;
@@ -50,7 +51,7 @@ html, body {
     color: #191a19;
   }
 
-  .navbar-links li a:hover{
+.navbar-links li a:hover{
   color: #252020;}
 
 .toggle-button{
@@ -75,30 +76,99 @@ html, body {
   margin: auto;
 }
 
+
 /* Slideshow container */
-.slideshow-container {
-max-width: 100%;
-position: relative;
-margin: auto;
-z-index: 100;
 
-}
-
-/* Hide the images by default */
-
-
-
-.portada-image{
-width: 1920px;
-height: 1080px;
-
-}
-
-.portada-image img{
-  width: 100%;
-  height: 100%;
-}
+ 
+  * {
+    box-sizing: border-box;
+  }
   
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+    position: relative;
+    
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;}
+
+
+
 
 /* Columnas */
 
@@ -136,7 +206,9 @@ margin: 20px;
 font-size: 50px;
 margin-bottom: 20px;
 color: #d8e9a8;
+list-style: none;
 }
+
 
 .column-title{
 margin-bottom: 20px;
@@ -155,6 +227,7 @@ font-weight: 300;
 background-color: #d8e9a8;
 padding: 3px 15px;
 border-radius: 15px; 
+list-style: none;
 }
 
 .btn:hover{
@@ -162,6 +235,7 @@ background-color: #4e9f3d;
 text-align: none;
 transform: scale(0.9);
 transition: 0.3s;
+
 }
 
 .btn a{
@@ -179,11 +253,6 @@ opacity: 1;
 background-image: linear-gradient(-45deg, #252020, #0e0707 50%, #070606, #020202);
 background-size: 10px 10px;
 }
-
-
-
-
-
 
 
 /* CONTACTOS */
@@ -479,7 +548,100 @@ input[type="checkbox"]:checked {
 
 }
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
 
+/* VIDEOS */
+
+.container1{
+  position: relative;
+  min-height: 100vh;
+  padding: 0 15%;
+  background-color: #000000;
+  background-image: linear-gradient(-45deg, #252020, #0e0707 50%, #070606, #020202);
+  background-size: 10px 10px
+}
+
+.container1 h1{
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  font-size: 40px;
+  font-weight: normal;
+  font-family: 'Lato', sans-serif;
+}
+
+.container1 .video-container1{
+  display: flex;
+  flex-wrap: wrap;
+   gap: 15px;
+  justify-content: center;
+  padding: 10px;
+}
+
+.container1 .video-container1 .video{
+  height: 250px;
+  width: 350px;
+  border-radius: 5px solid #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,.7);
+  cursor: pointer;
+  overflow: hidden;
+  
+}
+
+.container1 .video-container1 .video video{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: .2s linear;
+
+}
+
+.container1 .video-container1 .video:hover video{
+  transform: scale(1.1);
+} 
+
+.container1 .popup-video{
+  position: fixed;
+  top: 0; left: 0;
+  z-index: 100;
+  background: rgba(0,0,0,.7);
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+.container1 .popup-video video{
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 750px;
+  border-radius: 5px;
+  border: 3px solid #fff;
+  object-fit: cover;
+}
+
+.container1 .popup-video span{
+  position: absolute;
+  top: 5px; right: 20px;
+  font-size: 50px;
+  color: #fff;
+  font-weight: bolder;
+  z-index: 100;
+  cursor: pointer;
+
+}
+
+@media(max-width: 768px)  {
+  .container1 .popup-video video{
+      width: 95%;
+
+  }
+}
 
 @media screen and (max-width: 600px){
 .mySlides video{
