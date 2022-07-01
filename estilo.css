@@ -255,11 +255,6 @@ background-size: 10px 10px;
 }
 
 
-
-
-
-
-
 /* CONTACTOS */
 .contacto{
 display: flex;
@@ -298,6 +293,7 @@ margin-top: 8px;
 margin-bottom: 16px;
 resize: vertical;
 background: #191a19;
+color: white;
 }
 
 input[type=submit]{
@@ -311,6 +307,8 @@ border: none;
 
 input[type=submit]:hover{
 background-color: #252020;
+color: #d8e9a8;
+border: 1px solid #fff;
 }
 
 select[id="city"]{
@@ -553,7 +551,100 @@ input[type="checkbox"]:checked {
 
 }
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
 
+/* VIDEOS */
+
+.container1{
+  position: relative;
+  min-height: 100vh;
+  padding: 0 15%;
+  background-color: #000000;
+  background-image: linear-gradient(-45deg, #252020, #0e0707 50%, #070606, #020202);
+  background-size: 10px 10px
+}
+
+.container1 h1{
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  font-size: 40px;
+  font-weight: normal;
+  font-family: 'Lato', sans-serif;
+}
+
+.container1 .video-container1{
+  display: flex;
+  flex-wrap: wrap;
+   gap: 15px;
+  justify-content: center;
+  padding: 10px;
+}
+
+.container1 .video-container1 .video{
+  height: 250px;
+  width: 350px;
+  border-radius: 5px solid #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,.7);
+  cursor: pointer;
+  overflow: hidden;
+  
+}
+
+.container1 .video-container1 .video video{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: .2s linear;
+
+}
+
+.container1 .video-container1 .video:hover video{
+  transform: scale(1.1);
+} 
+
+.container1 .popup-video{
+  position: fixed;
+  top: 0; left: 0;
+  z-index: 100;
+  background: rgba(0,0,0,.7);
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+.container1 .popup-video video{
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 750px;
+  border-radius: 5px;
+  border: 3px solid #fff;
+  object-fit: cover;
+}
+
+.container1 .popup-video span{
+  position: absolute;
+  top: 5px; right: 20px;
+  font-size: 50px;
+  color: #fff;
+  font-weight: bolder;
+  z-index: 100;
+  cursor: pointer;
+
+}
+
+@media(max-width: 768px)  {
+  .container1 .popup-video video{
+      width: 95%;
+
+  }
+}
 
 @media screen and (max-width: 600px){
 .mySlides video{
