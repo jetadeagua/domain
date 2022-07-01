@@ -12,3 +12,14 @@ function showSlides() {
   slides[slideIndex-1].style.display = "block";
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
+
+document.querySelectorAll('.video-container1 video'). forEach(vid =>{
+  vid.onclick = () => {
+      document.querySelector('.popup-video').style.display = 'block';
+      document.querySelector('.popup-video video').src = vid.getAttribute('src');
+  }
+});
+
+document.querySelector('.popup-video span').onclick = () =>{
+  document.querySelector('.popup-video').style.display = 'none';
+}
