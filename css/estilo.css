@@ -1107,6 +1107,13 @@ font-weight: 10px;
   align-items: center;
 }
 
+.botonlink{
+  color: #d8e9a8;
+}
+
+.botonlink:hover{
+  color: #4e9f3d;
+}
 @media screen and (max-width: 952px){
 .logo{
   padding-left: 30px;
